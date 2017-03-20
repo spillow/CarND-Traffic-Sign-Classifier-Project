@@ -85,7 +85,7 @@ in training.
 
 ***3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.***
 
-The architecture template is in cell 10.  I refactored the initial LeNet model code to take as arguments a list of convolution layer and fully connected layer dimensions to aid in quickly
+The architecture template is in cell 10 and the setup is in cell 14.  I refactored the initial LeNet model code to take as arguments a list of convolutional layer and fully connected layer dimensions to aid in quickly
 prototyping different architectures.
 
 The final model consists of the following layers:
@@ -118,14 +118,13 @@ The final model consists of the following layers:
 Notably, after initial experiments max pooling layers were dropped.  There's certainly more room for experimentation here but no overfitting was observed
 so there may be an opportunity for more shrinking convolutional layers instead of max pooling.
 
-
 ***4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.***
 
-The code for training the model is located in the eigth cell of the ipython notebook.
+The code for training the model is located in cells 15 and 16 of the Ipython notebook.
 
 To train the model, I used an ....
 
-####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+***5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.***
 
 The code for calculating the accuracy of the model is located in the ninth cell of the Ipython notebook.
 
