@@ -83,27 +83,43 @@ The train/validation/test split was already provided as a set of pickled blobs a
 One method to achieve this breakdown is to shuffle a collection of data and then assign a percentage to each category.  An 80/10/10 split is common but, like here, the majority should reside
 in training.
 
-####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+***3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.***
 
-The code for my final model is located in the seventh cell of the ipython notebook.
+The architecture template is in cell 10.  I refactored the initial LeNet model code to take as arguments a list of convolution layer and fully connected layer dimensions to aid in quickly
+prototyping different architectures.
 
-My final model consisted of the following layers:
+The final model consists of the following layers:
 
-| Layer         		|     Description	        					|
+| Layer         		    |     Description	        					            |
 |:---------------------:|:---------------------------------------------:|
-| Input         		| 32x32x3 RGB image   							|
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Input         		    | 32x32x3 RGB image   							            |
+| Convolution 1x1x3   	| 1x1 stride, valid padding, outputs 32x32x3 	  |
+| Convolution 5x5     	| 1x1 stride, valid padding, outputs 28x28x20 	|
+| RELU					        |												                        |
+| Convolution 15x15    	| 1x1 stride, valid padding, outputs 14x14x40 	|
+| RELU					        |												                        |
+| Convolution 4x4    	  | 1x1 stride, valid padding, outputs 10x10x60 	|
+| RELU					        |												                        |
+| Convolution 4x4    	  | 1x1 stride, valid padding, outputs 7x7x80 	  |
+| RELU					        |												                        |
+| Fully connected		    | outputs 300        									          |
+| RELU					        |												                        |
+| Fully connected		    | outputs 200                                   |
+| RELU					        |												                        |
+| Fully connected		    | outputs 150                                   |
+| RELU					        |												                        |
+| Fully connected		    | outputs 120                                   |
+| RELU					        |												                        |
+| Fully connected		    | outputs 84                                    |
+| RELU					        |												                        |
+| Fully connected		    | outputs 43                                    |
+| Softmax				        | outputs probabilites to cross entropy         |
+
+Notably, after initial experiments max pooling layers were dropped.  There's certainly more room for experimentation here but no overfitting was observed
+so there may be an opportunity for more shrinking convolutional layers instead of max pooling.
 
 
-
-####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+***4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.***
 
 The code for training the model is located in the eigth cell of the ipython notebook.
 
