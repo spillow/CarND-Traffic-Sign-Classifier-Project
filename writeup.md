@@ -43,7 +43,7 @@ signs data set:
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
+***2. Include an exploratory visualization of the dataset and identify where the code is in your code file.***
 
 The code for this step is contained in cells 5-6.
 
@@ -67,24 +67,21 @@ CLAHE (Contrast Limited Adaptive Histogram Equalization) worked out well after e
 
 ![alt text][image2] ![alt text][image3]
 
-As a last step, I normalized the image data because ...
+Normalization of the data (zeroing out the mean and diving by the standard deviation for each pixel) was considered but, since these features are pixel values, there
+shouldn't be any great difference in their scale.  See [this](http://cs231n.github.io/neural-networks-2/) for more discussion on the matter.
 
-####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
+***2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)***
 
-The code for splitting the data into training and validation sets is contained in the fifth code cell of the IPython notebook.
+The train/validation/test split was already provided as a set of pickled blobs and are loaded in cell 1.  Data breakdown:
 
-To cross validate my model, I randomly split the training data into a training set and validation set. I did this by ...
+| Type         | Count
+|:------------:|--------:|
+| Training     | 34799   |
+| Validation   | 4410    |
+| Test         | 12630   |
 
-My final training set had X number of images. My validation set and test set had Y and Z number of images.
-
-The sixth code cell of the IPython notebook contains the code for augmenting the data set. I decided to generate additional data because ... To add more data to the the data set, I used the following techniques because ...
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ...
-
+One method to achieve this breakdown is to shuffle a collection of data and then assign a percentage to each category.  An 80/10/10 split is common but, like here, the majority should reside
+in training.
 
 ####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
