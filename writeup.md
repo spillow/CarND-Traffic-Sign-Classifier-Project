@@ -1,8 +1,4 @@
-#**Traffic Sign Recognition**
-
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
+**Traffic Sign Recognition**
 
 ---
 
@@ -29,13 +25,13 @@ The goals / steps of this project are the following:
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
 ---
-###Writeup / README
+**Writeup / README**
 
 You're reading it! and here is a link to my [project code](https://github.com/spillow/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+**Data Set Summary & Exploration**
 
-####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+***1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.***
 
 The code for this step is contained in cell 4.
 
@@ -56,9 +52,9 @@ Note that there is a spread of roughly 10:1 between the most commonly observed s
 
 ![alt text][image1]
 
-###Design and Test a Model Architecture
+**Design and Test a Model Architecture**
 
-####1. Describe how, and identify where in your code, you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
+***1. Describe how, and identify where in your code, you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.***
 
 The code for this step is contained in cells 7-8 of the IPython notebook.
 
