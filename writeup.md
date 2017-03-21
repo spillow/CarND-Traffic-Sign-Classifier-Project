@@ -33,7 +33,7 @@ You're reading it! and here is a link to my [project code](https://github.com/sp
 
 ***1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.***
 
-The code for this step is contained in cell 4.
+The code for this step is contained in cell 5.
 
 I used the numpy library to calculate summary statistics of the traffic
 signs data set:
@@ -85,7 +85,7 @@ in training.
 
 ***3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.***
 
-The architecture template is in cell 10 and the setup is in cell 14.  I refactored the initial LeNet model code to take as arguments a list of convolutional layer and fully connected layer dimensions to aid in quickly
+The architecture template is in cell 10 and the setup is in cell 14.  I refactored the initial LeNet model code (sequence of convolutional layers feeding to sequence of fully connected layers) to take as arguments a list of convolutional layer and fully connected layer dimensions to aid in quickly
 prototyping different architectures.
 
 The final model consists of the following layers:
@@ -116,7 +116,7 @@ The final model consists of the following layers:
 | Softmax				        | outputs probabilites to cross entropy         |
 
 Notably, after initial experiments max pooling layers were dropped.  There's certainly more room for experimentation here but no overfitting was observed
-so there may be an opportunity for more shrinking convolutional layers instead of max pooling.
+so there may be an opportunity for more control via shrinking convolutional layers instead of max pooling.
 
 ***4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.***
 
