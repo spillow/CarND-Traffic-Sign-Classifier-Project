@@ -19,10 +19,10 @@ The goals / steps of this project are the following:
 [image2]: ./examples/animal-before.png "Before Processing"
 [image3]: ./examples/animal-after.png "After Processing"
 [image4]: ./examples/double-curve.jpg "Double Curve Sign"
-[image5]: ./examples/no-passing.jpg "No Passing Sign"
-[image6]: ./examples/pedestrian-crossing.jpg "Pedestrian Crossing Sign"
-[image7]: ./examples/roadwork.jpg "Roadwork Sign"
-[image8]: ./examples/slippery-road.jpg "Slippery Road Sign"
+[image5]: ./examples/roadwork.jpg "Roadwork Sign"
+[image6]: ./examples/slippery-road.jpg "Slippery Road Sign"
+[image7]: ./examples/no-passing.jpg "No Passing Sign"
+[image8]: ./examples/pedestrian-crossing.jpg "Pedestrian Crossing Sign"
 
 ---
 **Writeup / README**
@@ -194,7 +194,6 @@ Here are the results of the prediction:
 | No Passing	      		| Children Crossing                 |
 | Pedestrian Crossing   | Turn left ahead                   |
 
-
 The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. Compared to the 94.3% accuracy of the test set, this particular batch didn't perform as well.
 
 ***3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability.***
@@ -211,4 +210,4 @@ For the first image, the model is very sure that it is a double curve sign (prob
 | .13	      			      | Slippery road					 		|
 | .11				            | Road narrows on the right	|
 
-For the second image ...
+For the second image, the model is very sure that it is a double curve sign (probability of 0.9999), which is correct. The top five soft max probabilities are
