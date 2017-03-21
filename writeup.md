@@ -18,11 +18,11 @@ The goals / steps of this project are the following:
 [image1]: ./examples/distribution.png "Traffic Sign Class Distribution"
 [image2]: ./examples/animal-before.png "Before Processing"
 [image3]: ./examples/animal-after.png "After Processing"
-[image4]: ./new_images/double-curve.jpg "Double Curve Sign"
-[image5]: ./new_images/no-passing.jpg "No Passing Sign"
-[image6]: ./new_images/pedestrian-crossing.jpg "Pedestrian Crossing Sign"
-[image7]: ./new_images/roadwork.jpg "Roadwork Sign"
-[image8]: ./new_images/slippery-road.jpg "Slippery Road Sign"
+[image4]: ./examples/double-curve.jpg "Double Curve Sign"
+[image5]: ./examples/no-passing.jpg "No Passing Sign"
+[image6]: ./examples/pedestrian-crossing.jpg "Pedestrian Crossing Sign"
+[image7]: ./examples/roadwork.jpg "Roadwork Sign"
+[image8]: ./examples/slippery-road.jpg "Slippery Road Sign"
 
 ---
 **Writeup / README**
