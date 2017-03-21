@@ -18,11 +18,11 @@ The goals / steps of this project are the following:
 [image1]: ./examples/distribution.png "Traffic Sign Class Distribution"
 [image2]: ./examples/animal-before.png "Before Processing"
 [image3]: ./examples/animal-after.png "After Processing"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image4]: ./new_images/double-curve.jpg "Double Curve Sign"
+[image5]: ./new_images/no-passing.jpg "No Passing Sign"
+[image6]: ./new_images/pedestrian-crossing.jpg "Pedestrian Crossing Sign"
+[image7]: ./new_images/roadwork.jpg "Roadwork Sign"
+[image8]: ./new_images/slippery-road.jpg "Slippery Road Sign"
 
 ---
 **Writeup / README**
@@ -162,14 +162,18 @@ The final model results are:
 
 **Test a Model on New Images**
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+***1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.***
 
-Here are five German traffic signs that I found on the web:
+Five German traffic signs found on the web:
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6]
 ![alt text][image7] ![alt text][image8]
 
-The first image might be difficult to classify because ...
+* Double Curve
+* No Passing
+* Pedestrian Crossing
+* Roadwork
+* Slippery Road
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
