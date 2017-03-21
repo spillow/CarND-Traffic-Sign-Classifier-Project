@@ -170,41 +170,45 @@ Five German traffic signs found on the web:
 ![alt text][image7] ![alt text][image8]
 
 * Double Curve
+    - The circular piece of the sign below the triangle could be picked up by parts of the network that look for the circular signs.
 * No Passing
+    - Nothing notably difficult about this sign.
 * Pedestrian Crossing
+    - There are some light diagonal watermarking artifacts that add a small amount of noise.  Could trigger diagonal line detectors.
 * Roadwork
+    - The yellow structure in the background could be picked up as a sign edge.
 * Slippery Road
+    - The rotation of the sign could be problematic without additional transformed training examples to make the network more robust to those image transformations.
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+***2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set.***
 
-The code for making predictions on my final model is located in the tenth cell of the jupyter notebook.
+The code for making predictions on the final model is located in the 19th cell of the jupyter notebook.
 
 Here are the results of the prediction:
 
-| Image			        |     Prediction	        					|
-|:---------------------:|:---------------------------------------------:|
-| Stop Sign      		| Stop sign   									|
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Image			            |     Prediction	        					|
+|:---------------------:|:---------------------------------:|
+| Double Curve          | Double Curve                      |
+| Road work         		| Road work 										    |
+| Slippery Road         | Slippery Road                     |
+| No Passing	      		| Children Crossing                 |
+| Pedestrian Crossing   | Turn left ahead                   |
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. Compared to the 94.3% accuracy of the test set, this particular batch didn't perform as well.
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+***3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability.***
 
-The code for making predictions on my final model is located in the 11th cell of the jupyter notebook.
+The code for calculating softmax probabilities on the final model is located in the 21st cell of the jupyter notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image, the model is very sure that it is a double curve sign (probability of 0.9999), which is correct. The top five soft max probabilities are
 
-| Probability         	|     Prediction	        					|
-|:---------------------:|:---------------------------------------------:|
-| .60         			| Stop sign   									|
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
+| Probability         	|     Prediction	       	  |
+|:---------------------:|:-------------------------:|
+| .99         			    | Double Curve 					    |
+| .65     				      | Speed limit (50km/h)		  |
+| .14					          | Speed limit (80km/h)			|
+| .13	      			      | Slippery road					 		|
+| .11				            | Road narrows on the right	|
 
 For the second image ...
