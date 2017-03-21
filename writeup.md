@@ -131,11 +131,12 @@ led to the final validation accuracy fluctuating toward the end.  A batch size u
 The code for calculating the accuracy of the model is located in cells 16 and 17 of the jupyter notebook.
 
 My final model results were:
-| Accuracy   |   %   |
-|:-----------|:-----:|
-| Training   | 99.6% |
-| Validation | 96.4% |
-| Test       | 94.3% |
+
+| Accuracy    |   %   |
+|:-----------:|:-----:|
+| Training    | 99.6% |
+| Validation  | 96.4% |
+| Test        | 94.3% |
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
