@@ -204,10 +204,48 @@ For the first image, the model is very sure that it is a double curve sign (prob
 
 | Probability         	|     Prediction	       	  |
 |:---------------------:|:-------------------------:|
-| .99         			    | Double Curve 					    |
-| .65     				      | Speed limit (50km/h)		  |
-| .14					          | Speed limit (80km/h)			|
-| .13	      			      | Slippery road					 		|
-| .11				            | Road narrows on the right	|
+| .9999        			    | Double Curve 					    |
+| ~.00     				      | Speed limit (50km/h)		  |
+| ~.00				          | Speed limit (80km/h)			|
+| ~.00      			      | Slippery road					 		|
+| ~.00			            | Road narrows on the right	|
 
-For the second image, the model is very sure that it is a double curve sign (probability of 0.9999), which is correct. The top five soft max probabilities are
+For the second image, the model is very sure that it is a road work sign (probability of 0.9999), which is correct. The top five soft max probabilities are
+
+| Probability         	|     Prediction	       	     |
+|:---------------------:|:----------------------------:|
+| .9999        			    | Road work                    |
+| ~.00     				      | Road narrows on the right		 |
+| ~.00				          | Speed limit (80km/h)			   |
+| ~.00      			      | Go straight or right				 |
+| ~.00			            | Dangerous curve to the right |
+
+For the third image, the model is very sure that it is a slippery road sign (probability of 0.9995), which is correct. The top five soft max probabilities are
+
+| Probability         	|     Prediction	       	     |
+|:---------------------:|:----------------------------:|
+| .9995        			    | Slippery road                |
+| ~.00     				      | Double curve		             |
+| ~.00				          | Roundabout mandatory			   |
+| ~.00      			      | Beware of ice/snow				   |
+| ~.00			            | Speed limit (80km/h)         |
+
+For the fourth image, the model is very sure that it is a children crossing sign (probability of 0.9889), which is not correct; it is a no passing sign (prediction 4). The top five soft max probabilities are
+
+| Probability         	|     Prediction	       	     |
+|:---------------------:|:----------------------------:|
+| .99         			    | Children crossing            |
+| .01     				      | Speed limit (30km/h)         |
+| ~.00				          | Roundabout mandatory			   |
+| ~.00      			      | No passing				           |
+| ~.00			            | General caution              |
+
+For the fifth image, the model is somewhat sure that it is a turn left ahead sign (probability of 0.764), which is not correct; it is a pedestrian crossing sign (doesn't even appear in top 5). The top five soft max probabilities are
+
+| Probability         	|     Prediction	       	     |
+|:---------------------:|:----------------------------:|
+| .76         			    | Turn left ahead              |
+| .03     				      | Ahead only                   |
+| .03				            | No passing for vehicles over 3.5 metric tons |
+| .02      			        | Traffic signals				       |
+| .02			              | No passing                   |
