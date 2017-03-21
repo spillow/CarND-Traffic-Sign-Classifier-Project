@@ -130,7 +130,7 @@ led to the final validation accuracy fluctuating toward the end.  A batch size u
 
 The code for calculating the accuracy of the model is located in cells 16 and 17 of the jupyter notebook.
 
-My final model results were:
+The final model results are:
 
 | Accuracy    |   %   |
 |:-----------:|:-----:|
@@ -138,19 +138,29 @@ My final model results were:
 | Validation  | 96.4% |
 | Test        | 94.3% |
 
-If an iterative approach was chosen:
+***Iterative Approach***
 * What was the first architecture that was tried and why was it chosen?
+    - The LeNet architecture was first chosen for its general success out of the box in image classification problems.
 * What were some problems with the initial architecture?
+    - There were no large problems; the initial validation accuracy was ~89%.  The question was more of what image processing techniques and architectural changes
+      would boost performance.
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to over fitting or under fitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
+    - From the start, it was interesting to experiment with deepening the convoluational and fully connected layers.  This may be done to combat overfitting but it was interesting
+      to see if more interesting features could be learned.
+    - The pooling layers were dropped in favor of more convolutional layers to give more control over the narrowing feature layers.
+    - Dropout, while experimented with, gave no benefit.  Removal of the RELU layers in the fully connected layers resulted, surprisingly, in little drop in validation accuracy early on.
+      Perhaps a sufficiently sophisticated convolutional side is enough for a linear classifier to perform well.
 * Which parameters were tuned? How were they adjusted and why?
+    The most interesting parameters were the depths of the convolutional layers.  At least for this application, greatly increasing the sizes beyond the 6 and 16 of LeNet
+    (to 20,40,60,80) helped increase validation accuracy.
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+    - Convolutional layers are well suited for detecting patterns at any point in an image (so called translational invariance) due to reduction of the degrees of freedom in the weights.
+      Having a fully connected layer spontaneously learn translational invariance would probably take quite a bit more time and data to train so we encode that property in the structure
+      of the network.
+    - Dropout's most common use is to combat overfitting by randomly dropping weights so that the network has to learn redundant representations of the same data.  It would be interesting
+      to experiment more with how this could generate a more robust model (intuitively, perhaps it could take a structure where an ensemble of internal classifers take a "majority vote").
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-
-###Test a Model on New Images
+**Test a Model on New Images**
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
